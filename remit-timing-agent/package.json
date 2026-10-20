@@ -1,0 +1,13 @@
+{
+  "name": "remit-timing-agent",
+  "version": "1.0.0",
+  "description": "Deadline-aware, risk-controlled remittance planner with a guarded AI agent (Shenzhen FinTechathon 2026, Topic C).",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve srcs -l 5173",
+    "test": "node --test tests/*.test.mjs",
+    "eval": "node evals/run.mjs",
+    "calibrate": "node scripts/calibrate.mjs"
+  },
+  "license": "MIT"
+}

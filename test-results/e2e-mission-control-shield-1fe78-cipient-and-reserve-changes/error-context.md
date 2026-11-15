@@ -1,0 +1,195 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e.spec.mjs >> mission control: shields flip correctly on recipient and reserve changes
+- Location: tests\e2e.spec.mjs:70:1
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]: REMIT
+        - generic [ref=e14]: Mission Control
+      - button "Chat" [ref=e15]: 💬Chat
+      - button "Mission Control" [ref=e16]: 🛰️Mission Control
+      - button "Financial Twin" [ref=e17]: 📊Financial Twin
+      - button "Insights" [ref=e18]: 📈Insights
+      - button "Planner" [ref=e19]: 🎯Planner
+      - button "Settings" [ref=e20]: ⚙️Settings
+    - main [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Agent Chat
+        - generic [ref=e25]:
+          - generic [ref=e26]:
+            - text: From
+            - combobox "From country" [ref=e27]:
+              - option "🇨🇳 China (CNY)" [selected]
+          - generic [aria-hidden] [ref=e28]: →
+          - generic [ref=e29]:
+            - text: To
+            - combobox "To country" [ref=e30]:
+              - option "🇲🇲 Myanmar (MMK)" [selected]
+        - generic [ref=e31]: 1 CNY = — MMK LOADING
+      - region "Agent Chat" [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: Conversation CNY → MMK
+            - log
+            - generic [ref=e36]:
+              - textbox "Message to the agent" [ref=e37]:
+                - /placeholder: Ask about a transfer...
+              - button "Send" [ref=e38]
+          - generic [ref=e39]:
+            - generic [ref=e40]: Results —
+            - generic [ref=e41]: Simulation results will appear here after you ask a question.
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: Mission Control CNY → MMK
+          - group "What-if inputs" [ref=e47]:
+            - generic [ref=e48]:
+              - text: Amount to send
+              - spinbutton "Amount to send" [ref=e49]: "1000"
+            - generic [ref=e50]:
+              - text: Deadline (days)
+              - spinbutton "Deadline (days)" [ref=e51]: "7"
+            - generic [ref=e52]:
+              - text: Recipient minimum
+              - spinbutton "Recipient minimum" [ref=e53]: "0"
+            - generic [ref=e54]:
+              - text: Strategy
+              - combobox "Strategy" [ref=e55]:
+                - option "Send now" [selected]
+                - option "Wait 3 days"
+                - option "Wait 7 days"
+                - option "Split 60/40"
+            - generic [ref=e56]:
+              - text: Sender balance
+              - spinbutton "Sender balance" [ref=e57]: "3000"
+            - generic [ref=e58]:
+              - text: Essential expenses
+              - spinbutton "Essential expenses" [ref=e59]: "800"
+            - generic [ref=e60]:
+              - text: Emergency reserve
+              - spinbutton "Emergency reserve" [ref=e61]: "1000"
+            - generic [ref=e62]:
+              - text: Hypothetical shock
+              - combobox "Hypothetical shock" [ref=e63]:
+                - option "No shock" [selected]
+                - option "Rate −5%"
+                - option "Rate −10%"
+                - option "Fees +1.5 pp"
+                - option "Delay +2 days"
+                - option "Rate −5% + Fees +1.5 pp + Delay"
+          - button "Stress-test my plan" [ref=e65]
+          - generic [ref=e66]:
+            - button "Build passport" [ref=e67]
+            - button "Export (.md)" [ref=e68]
+        - generic [ref=e69]:
+          - heading "Judge Challenge Mode" [level=3] [ref=e71]
+          - generic [ref=e72]:
+            - heading "Safety" [level=3] [ref=e73]
+            - generic [ref=e74]: The AI can never move money. Approval happens only when a human clicks Approve on a sandbox proposal. Hypothetical shocks are clearly labelled and never presented as forecasts.
+          - generic [ref=e75]:
+            - heading "Data source" [level=3] [ref=e76]
+            - generic [ref=e77]: Rate source—
+            - generic [ref=e78]: Fetched—
+            - generic [ref=e79]: Live Wise when reachable, otherwise a dated reference rate. Not a forecast.
+      - generic [ref=e81]:
+        - generic [ref=e82]:
+          - generic [ref=e83]: Financial Twin NOT SET
+          - generic [ref=e85]:
+            - generic [ref=e86]:
+              - text: Monthly income (source)
+              - spinbutton "Monthly income (source)" [ref=e87]
+            - generic [ref=e88]:
+              - text: Fixed costs (source)
+              - spinbutton "Fixed costs (source)" [ref=e89]
+            - generic [ref=e90]:
+              - text: Current savings (source)
+              - spinbutton "Current savings (source)" [ref=e91]
+            - generic [ref=e92]:
+              - text: Monthly remittance (source)
+              - spinbutton "Monthly remittance (source)" [ref=e93]
+            - button "Build Financial Twin" [ref=e95]
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - heading "Twin Status" [level=3] [ref=e98]
+            - generic [ref=e99]: ProfileNot set
+            - generic [ref=e100]: Horizon12 months
+            - generic [ref=e101]: Simulations1,000
+          - generic [ref=e102]:
+            - heading "Quick Tips" [level=3] [ref=e103]
+            - generic [ref=e104]: Enter your real numbers for an accurate projection. The Twin uses the active pair and simulates 12 months forward.
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: Full Simulation Results —
+          - generic [ref=e109]: Run a simulation in the Chat tab to see full results here.
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - heading "Method" [level=3] [ref=e113]
+            - generic [ref=e114]: ModelMultiplicative random walk
+            - generic [ref=e115]: Paths1,000
+            - generic [ref=e116]: Volatility0.8%/day (assumed)
+            - generic [ref=e117]: Drift0 (assumed)
+          - generic [ref=e118]:
+            - heading "Disclaimer" [level=3] [ref=e119]
+            - generic [ref=e120]: Probabilities shown are model-based, not empirically verified. This is not financial advice.
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]: Transfer Planner STRATEGY ENGINE
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: Amount to send (CNY)
+              - spinbutton "Amount to send (CNY)" [ref=e129]
+            - generic [ref=e130]:
+              - generic [ref=e131]: Recipient needs (MMK)
+              - spinbutton "Recipient needs (MMK)" [ref=e132]
+            - generic [ref=e133]:
+              - text: Deadline (days)
+              - spinbutton "Deadline (days)" [ref=e134]: "30"
+            - generic [ref=e135]:
+              - text: Objective
+              - combobox "Objective" [ref=e136]:
+                - option "Maximize expected payout" [selected]
+                - option "Minimize risk of missing requirement"
+                - option "Maximize payout, cap downside"
+            - button "Run Analysis" [ref=e138]
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - heading "How it works" [level=3] [ref=e141]
+            - generic [ref=e142]:
+              - text: "The Planner compares three strategies under your objective:"
+              - strong [ref=e143]: Send now
+              - text: — deterministic, no uncertainty.
+              - strong [ref=e144]: Wait N days
+              - text: — simulated outcome at deadline.
+              - strong [ref=e145]: Split
+              - text: — part now, part later. Every strategy respects your deadline and is evaluated on 1,000 Monte Carlo paths.
+          - generic [ref=e146]:
+            - heading "Disclaimer" [level=3] [ref=e147]
+            - generic [ref=e148]: Recommendations are model-based, not financial advice. Always verify with your provider before executing.
+  - dialog [ref=e149]:
+    - generic [ref=e150]:
+      - heading "⚡ Connect a live LLM (optional)" [level=3] [ref=e151]
+      - paragraph [ref=e152]: The demo works fully offline. Adding a Groq key only enables free-form chat. The tool layer, guardrails and human approval are identical.
+      - text: Groq API Key
+      - textbox "Groq API Key" [ref=e153]:
+        - /placeholder: gsk_...
+      - generic [ref=e154]:
+        - button "Enable LLM" [ref=e155]
+        - button "Cancel" [active] [ref=e156]
+```

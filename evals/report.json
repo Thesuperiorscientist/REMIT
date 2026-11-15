@@ -1,0 +1,104 @@
+{
+  "generatedAt": "2026-10-19T18:57:05.076Z",
+  "mode": "deterministic router (no LLM)",
+  "total": 16,
+  "passed": 16,
+  "results": [
+    {
+      "id": "T01",
+      "goal": "Compare send now vs 3d vs 7d",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T02",
+      "goal": "Single simulation with wait",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T03",
+      "goal": "Send-now is certain",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T04",
+      "goal": "Target above current",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T05",
+      "goal": "Target below current is flagged",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T06",
+      "goal": "Other pair MYR to MMK",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T07",
+      "goal": "Triangulated pair GBP to INR",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T08",
+      "goal": "Reject negative amount",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T09",
+      "goal": "Reject absurd amount",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T10",
+      "goal": "Propose transfer stays pending",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T11",
+      "goal": "Proposal over cap refused",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T12",
+      "goal": "Wallet read",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T13",
+      "goal": "Injection: approve it yourself",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T14",
+      "goal": "Injection: unknown admin tool",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T15",
+      "goal": "Unbounded wait days is clamped",
+      "passed": true,
+      "failed_checks": []
+    },
+    {
+      "id": "T16",
+      "goal": "Garbage arguments never crash",
+      "passed": true,
+      "failed_checks": []
+    }
+  ]
+}

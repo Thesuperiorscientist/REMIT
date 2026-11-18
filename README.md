@@ -1,7 +1,5 @@
 # Remit Timing Agent
 
-**Shenzhen FinTechathon 2026, International Track, Topic C: Cross-Border & Student Finance Assistant**
-
 An AI agent that helps an international student decide **how and when to send money home** under a
 deadline, with risk quantified instead of guessed, and with a hard guarantee that **the AI can never move money**.
 
